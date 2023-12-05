@@ -11,7 +11,13 @@ router.post("/dados", getDocumentoDado)
 
 router.post("/home", getDocumentoHome)
 
-//router.get("/login", getUsuario)
+router.get("/", (req, res) => {
+    // Imprimir "Olá, mundo" no console do servidor
+    console.log("Olá, mundo");
+
+    // Enviar "Olá, mundo" como resposta para o cliente
+    res.send("Olá, mundo");
+})
 
 router.post("/login", getUsuario)
 
