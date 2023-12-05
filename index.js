@@ -13,6 +13,6 @@ app.use(cors());
 
 app.use("/.netlify/functions/api", routes);
 
-app.listen(3000);
+app.listen( process.env.PORT || 3000);
 
 module.exports.handler = serverless(app)
